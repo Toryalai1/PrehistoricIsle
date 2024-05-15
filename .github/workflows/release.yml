@@ -53,8 +53,8 @@ jobs:
       - name: Copy, tag with version and create SHA256 checksum
         run: |
           mkdir -p releases
-          cp output_files/my_project.rbf releases/prehisle${{ steps.version.outputs.version }}.rbf
-          ( cd output_files && sha256sum my_project.rbf > ../releases/prehisle${{ steps.version.outputs.version }}.rbf.sha256 )
+          cp output_files/prehisle.rbf releases/prehisle${{ steps.version.outputs.version }}.rbf
+          ( cd output_files && sha256sum prehisle.rbf > ../releases/prehisle${{ steps.version.outputs.version }}.rbf.sha256 )
       ##########################################################################
       ## 6 - Create a new GitHub release and upload the distribution artifacts
       ##########################################################################
